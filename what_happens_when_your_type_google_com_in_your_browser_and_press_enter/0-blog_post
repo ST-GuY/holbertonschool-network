@@ -1,0 +1,68 @@
+What Happens When You Type https://www.google.com
+ in Your Browser and Press Enter?
+
+ 1. DNS Request
+
+When you type https://www.google.com, the browser first needs to know where Google is located on the internet.
+
+The browser cannot use the domain name directly. It needs an IP address. To get it, the browser sends a DNS request to a DNS server asking for the IP address of www.google.com.
+
+Once the DNS server responds with the IP address, the browser can continue.
+
+2. TCP/IP Connection
+
+After getting the IP address, the browser creates a connection to the server using TCP/IP.
+
+TCP makes sure that data is sent correctly and in the right order. Before sending data, the browser and the server perform a TCP handshake to establish the connection.
+
+IP is responsible for sending the data packets to the correct destination.
+
+3. Firewall
+
+The request then passes through a firewall.
+
+A firewall protects the network by blocking unwanted traffic and allowing only safe connections. If the request follows the security rules, it is allowed to continue to the server.
+
+4. HTTPS and SSL/TLS
+
+Because the website uses HTTPS, the browser and the server create a secure connection.
+
+During this step:
+
+The server sends its SSL certificate
+
+The browser checks that the certificate is valid
+
+The data exchanged is encrypted
+
+This ensures that the information sent between the browser and the server is safe.
+
+5. Load Balancer
+
+Google receives a very large number of requests every second. To handle this, it uses a load balancer.
+
+The load balancer receives the request and forwards it to one of many available servers. This helps keep the website fast and reliable.
+
+6. Web Server
+
+The request reaches a web server.
+
+The web server handles HTTP requests and sends back static content like HTML, CSS, and images. If the request needs dynamic data, the web server forwards it to the application server.
+
+7. Application Server
+
+The application server runs the application logic.
+
+It decides how to process the request and what data is needed. If necessary, it asks the database for information.
+
+8. Database
+
+The database stores the website’s data.
+
+The application server sends a query to the database, gets the required data, and uses it to build the response that will be sent back to the user.
+
+Conclusion
+
+Finally, the response is sent back to the browser. The browser displays the page by reading the HTML, loading styles and scripts, and rendering the content on the screen.
+
+All of these steps happen very quickly, but they show how many systems work together to display a simple web page.
